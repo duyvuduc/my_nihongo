@@ -1,0 +1,7 @@
+<form method="POST", action="/books/<%= @book.id %>">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="hidden" name="_method" value="delete">
+  <%= @book.title %>
+  <%= @book.description %>
+  <button type="submit">Delete</button>
+</form>

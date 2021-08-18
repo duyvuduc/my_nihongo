@@ -1,0 +1,8 @@
+<form method="POST" action="create">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="fname">Title:</label><br>
+  <input type="text" id="fname" name="title"><br>
+  <label for="lname">Description:</label><br>
+  <input type="text" id="lname" name="description"><br>
+  <button type="submit">New</button>
+</form>

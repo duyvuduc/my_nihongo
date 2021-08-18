@@ -1,0 +1,40 @@
+<div class="container">
+  <form method="POST" action="<%= lessons_update_path %>">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="hidden" name="_method" value="PUT">
+    <input type="hidden" name="id" value="<%= @lesson.id %>">
+
+    <div class="form-group">
+      <label for="fname">Title:</label><br>
+      <input type="text" id="fname" name="lesson[title]" value="<%= @lesson.title %>" class="form-control" aria-describedby="emailHelp" placeholder="Enter title"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="fname">Content:</label><br>
+      <input type="text" id="fname" name="lesson[content]" value="<%= @lesson.content %>" class="form-control" aria-describedby="emailHelp" placeholder="Enter content"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="fname">Level:</label><br>
+      <input type="text" id="fname" name="lesson[level]" value="<%= @lesson.level %>" class="form-control" aria-describedby="emailHelp" placeholder="Enter level"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="fname">Category:</label><br>
+      <input type="text" id="fname" name="lesson[category]" value="<%= @lesson.category %>" class="form-control" aria-describedby="emailHelp" placeholder="Enter category"><br>
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Choose book</label>
+      </div>
+      <select class="custom-select" name="lesson[book_id]">
+        <% @books.each do |book|%>
+          <option value="<%=book.id%>"><%= book.title %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-info">Update</button>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <form method="GET" action="<%=lessons_path%>" class="form-inline">
+      <input name="title" type="text" id="exampleInputTitle" placeholder="search title" aria-label="Search" class="form-control mr-sm-2">
+      <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+    </form>
+  </nav>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Level</th>
+        <th>Category</th>
+        <th>Book</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lessons.each do |lesson| %>
+        <tr>
+          <td><a href="<%=show_lessons_path(lesson.id)%>"><%= lesson.title %></a></td>
+          <td><%= lesson.content %></td>
+          <td><%= lesson.level %></td>
+          <td><%= lesson.category %></td>
+          <td><%= lesson.book.title %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
+
