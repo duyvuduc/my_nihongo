@@ -10,9 +10,7 @@
     <thead class="thead-light">
       <tr>
         <th>Title</th>
-        <th>Content</th>
-        <th>Level</th>
-        <th>Category</th>
+        
         <th>Book</th>
       </tr>
     </thead>
@@ -20,13 +18,13 @@
       <% @lessons.each do |lesson| %>
         <tr>
           <td><a href="<%=show_lessons_path(lesson.id)%>"><%= lesson.title %></a></td>
-          <td><%= lesson.content %></td>
-          <td><%= lesson.level %></td>
-          <td><%= lesson.category %></td>
+          
           <td><%= lesson.book.title %></td>
         </tr>
       <%end%>
     </tbody>
   </table>
+  <%= '<h1>aasdnf</h1>'.html_safe%>
+  <a href="<%=lessons_new_path%>">New</a>
 </div>
 

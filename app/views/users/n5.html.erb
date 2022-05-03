@@ -1,0 +1,62 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown" data-toggle="dropdown" href="<%=users_path%>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+    </li>
+
+    <% @levels.each do |level| %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= level[:name] %></a>
+        <div class="dropdown-menu">
+            <%level[:books].each do |book|%>
+            <a class="dropdown-item" href="#"><%= book %></a>
+            <%end%>
+        </div>
+      </li>
+    <%end%>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kanji</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Soumatome</a>
+        <a class="dropdown-item" href="#">Mimikara Oboeru</a>
+        <a class="dropdown-item" href="#">Shinkanzen</a>
+        <a class="dropdown-item" href="#">Try</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="card card-info">
+    <div class="card-header">
+      <h4 class="card-title">Ban dang o: <a href="<%=users_path%>">Home</a> > N5</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-group align-items-center">
+        <div>
+          <a href="<%=users_bang_chu_cai_path%>">Bang chu cai</a>
+        </div>
+        <div>
+          <a href="<%=users_minano_nihongo_path%>">Minano Nihongo</a>
+        </div>
+        <div>
+          <a href="#">Kanji Masuta N5</a>
+        </div>
+        <div>
+          <a href="#">Gokaku Dekiru</a>
+        </div>
+        <div>
+          <a href="#">Dokkai N5</a>
+        </div>
+        <div>
+          <a href="#">On tap</a>
+        </div>
+        <div>
+          <a href="#">De thi JLPT N5</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      Footer
+    </div>
+  </div>
+</div>

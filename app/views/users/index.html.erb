@@ -1,0 +1,87 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+    </li>
+
+    <% @levels.each do |level| %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= level[:name] %></a>
+        <div class="dropdown-menu">
+            <%level[:books].each do |book|%>
+            <a class="dropdown-item" href="#"><%= book %></a>
+            <%end%>
+        </div>
+      </li>
+    <%end%>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kanji</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Soumatome</a>
+        <a class="dropdown-item" href="#">Mimikara Oboeru</a>
+        <a class="dropdown-item" href="#">Shinkanzen</a>
+        <a class="dropdown-item" href="#">Try</a>
+      </div>
+    </li>
+  </ul>
+  <div class="card card-info">
+    <div class="card-header">
+      <h3 class="card-title">Home</h3>
+    </div>
+
+    <div class="card-body">
+      <div class="form-group row align-items-center">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gioi thieu</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="<%=users_gioi_thieu_path%>" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">N5</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <a href="<%=users_n5_path%>" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">N4</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">N3</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">N2</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Kanji</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      Footer
+    </div>
+</div>

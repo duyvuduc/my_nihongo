@@ -1,0 +1,47 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown" data-toggle="dropdown" href="<%=users_path%>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kanji</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Soumatome</a>
+        <a class="dropdown-item" href="#">Mimikara Oboeru</a>
+        <a class="dropdown-item" href="#">Shinkanzen</a>
+        <a class="dropdown-item" href="#">Try</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="card card-info">
+    <div class="card-header">
+      <h4 class="card-title">Ban dang o: <a href="<%=users_path%>">Home</a> > <a href="<%=users_n5_path%>">N5</a> > Minano Nihongo</h4>
+    </div>
+
+    <div class="card-body row">
+      <div class="form-group align-items-center col-8">
+        <%@lessons.each do |lesson| %>
+            <div>
+                <a href="/users/lessons/<%=lesson.id%>"><%= lesson.title%></a>
+            </div>
+        <%end%>
+      </div>
+
+      <div class="form-group align-items-center col-4">
+        <div>
+          <button type="button" class="btn btn-outline-info stt">1</button>
+          <button type="button" class="btn btn-outline-info stt">2</button>
+          <button type="button" class="btn btn-outline-info stt">3</button>
+          <button type="button" class="btn btn-outline-info stt">4</button>
+          <button type="button" class="btn btn-outline-info stt">5</button>
+        </div>
+    </div>
+
+    <div class="card-footer">
+      footer
+    </div>
+  </div>
+

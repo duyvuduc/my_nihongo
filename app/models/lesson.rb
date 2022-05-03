@@ -1,5 +1,5 @@
 class Lesson < ApplicationRecord
   belongs_to :book
-  validates :title, :content, :level, :category, presence: true
-  validates :level, numericality: { only_integer: true }
+  has_many :sections
+  validates :title, :content, :category, presence: true
 end

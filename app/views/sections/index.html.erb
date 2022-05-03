@@ -1,0 +1,20 @@
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Content</th>
+    <th>Lesson_id</th>
+    <th></th>
+  </tr>
+  <% @sections.each do |section| %>
+    <tr>
+      <td><a href="/sections/<%=section.id%>"><%= section.id %></a></td>
+      <td><%= section.name %></td>
+      <td><%= section.content %></td>
+      <td><%= section.lesson_id %></td>
+      <td><button class="btn btn-primary"><a href="<%=edit_sections_path(section.id)%>">Edit</button></td>
+    </tr>
+  <%end%>
+</table>
+<button class="btn btn-primary"><a href="<%=sections_new_path%>">New</button>
+

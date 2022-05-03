@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-group">
+    <form method="POST" action="create">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <label for="fname">Name:</label><br>
+      <input type="text" id="fname" name="name" class="form-control" placeholder="Name"><br>
+      <label for="lname">Content:</label><br>
+      <input type="text" id="lname" name="content" class="form-control" placeholder="Content"><br>
+      <label for="lname">Lesson_id:</label><br>
+      <input type="text" id="lname" name="lesson_id" class="form-control" placeholder="Lesson_id"><br>
+      <button type="submit" class="btn btn-primary">New</button>
+    </form>
+  </div>
+</div>

@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(title: params[:title], description: params[:description])
+    Book.create(title: params[:title], description: params[:description], level: params[:level])
   end
 
   def edit
@@ -17,7 +17,7 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    @book.update(title: params[:title], description: params[:description])
+    @book.update(title: params[:title], description: params[:description], level: params[:level])
   end
 
   def show

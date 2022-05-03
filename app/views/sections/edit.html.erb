@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="form-group">
+    <form method="POST" action="/sections/update">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="hidden" name="_method" value="PUT">
+      <input type="hidden" name="id" value="<%= @section.id %>">
+      <label for="fname">Name:</label><br>
+      <input type="text" id="fname" name="name" value="<%= @section.name %>" class="form-control" placeholder="Name"><br>
+      <label for="fname">Content:</label><br>
+      <input type="text" id="fname" name="content" value="<%= @section.content %>" class="form-control" placeholder="Content"><br>
+      <label for="fname">Lesson_id:</label><br>
+      <input type="text" id="fname" name="lesson_id" value="<%= @section.lesson_id %>" class="form-control" placeholder="Lesson_id"><br>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown" data-toggle="dropdown" href="<%=users_path%>" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+    </li>
+
+    <% @levels.each do |level| %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= level[:name] %></a>
+        <div class="dropdown-menu">
+            <%level[:books].each do |book|%>
+            <a class="dropdown-item" href="#"><%= book %></a>
+            <%end%>
+        </div>
+      </li>
+    <%end%>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kanji</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Soumatome</a>
+        <a class="dropdown-item" href="#">Mimikara Oboeru</a>
+        <a class="dropdown-item" href="#">Shinkanzen</a>
+        <a class="dropdown-item" href="#">Try</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="card card-info">
+    <div class="card-header">
+      <h4 class="card-title">Ban dang o: <a href="<%=users_path%>">Home</a> > Gioi thieu</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="form-group align-items-center">
+        <div>
+          <h3>Gioi thieu bai hoc</h3>
+        </div>
+        <div>
+          <a href="<%=users_n5_path%>"><h4>N5</h4></a>
+          <p>Hoc kien thuc co ban nhap mon cua tieng Nhat nhu la bang chu cai, cac tu vung va cau truc ngu phap don gian</p>
+        </div>
+        <div>
+          <a href="#"><h4>N4</h4></a>
+          <p>Tiep tuc voi 25 bai Minano Nihongo voi tu vung ngu phap don gian lam nen cho kien thuc N3.</p>
+        </div>
+        <div>
+          <a href="#"><h4>N3</h4></a>
+          <p>Bat dau voi kien thuc tieng Nhat trung cap. Can nam chac kien thuc N4 va N5 de co the hoc tot N3</p>
+        </div>
+        <div>
+          <a href="#"><h4>N2</h4></a>
+          <p>Nam chac cac kien thuc cua N5 N4 N3 co the de dang tu hoc N2 cung voi cac giao trinh tu chon: Mimikara, Shinkanzen, Soumatome</p>
+        </div>
+        <div>
+          <a href="#"><h4>On tap</h4></a>
+          <p>On tap lai cac kien thuc da hoc trong tung level de co the nam chac cac bai hoc cac cau truc ngu phap, tu vung, chu han. Luyen cac de JLPT de lam quen voi de thi.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      Footer
+    </div>
+  </div>
+</div>
+
